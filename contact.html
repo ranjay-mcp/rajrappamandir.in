@@ -10,3 +10,12 @@
 <!-- Footer Section -->
 <div id="footer"></div>
 </body></html>
+<script>
+async function loadComponent(id, file) {
+    const response = await fetch(file);
+    document.getElementById(id).innerHTML = await response.text();
+}
+
+loadComponent("header", "header.html");
+loadComponent("footer", "footer.html");
+</script>
