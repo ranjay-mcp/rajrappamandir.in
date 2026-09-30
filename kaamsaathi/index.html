@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KaamSaathi - Find trusted cooks, drivers, house help and daily labour near you.">
+  <title>KaamSaathi | Find Local Workers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home"><span class="brand-mark">KS</span><span>KaamSaathi</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <nav id="navMenu">
+        <a href="#services">Services</a><a href="#workers">Find Workers</a><a href="#how">How It Works</a><a href="#post-job">Post Job</a>
+        <button class="btn btn-light" data-open="workerModal">I Need Work</button>
+        <button class="btn btn-primary" data-open="loginModal">Login</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">LOCAL • SIMPLE • VERIFIED PROFILES</span>
+          <h1>Find trusted local help for <span>today or every month.</span></h1>
+          <p>Discover cooks, drivers, house helpers, cleaners and daily labour. Compare experience, rates and availability before contacting a worker.</p>
+          <div class="hero-actions"><a class="btn btn-primary btn-lg" href="#workers">Find a Worker</a><button class="btn btn-outline btn-lg" data-open="workerModal">Register as Worker</button></div>
+          <div class="trust-row"><span>✓ Mobile verified</span><span>✓ Ratings & reviews</span><span>✓ Daily / monthly hiring</span></div>
+        </div>
+        <div class="search-card">
+          <h2>What help do you need?</h2>
+          <label>Service</label>
+          <select id="heroService"><option value="all">All Services</option><option>Cook</option><option>Driver</option><option>Daily Labour</option><option>House Help</option><option>Cleaner</option></select>
+          <label>Area / PIN code</label><input id="heroArea" placeholder="e.g. Sakchi or 831001">
+          <label>Hiring type</label><div class="segmented"><button class="active" data-hire="Any">Any</button><button data-hire="Daily">Daily</button><button data-hire="Monthly">Monthly</button></div>
+          <button class="btn btn-primary btn-block" id="heroSearch">Search Available Workers</button>
+          <small>Prototype only — no real booking or verification is performed.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services"><div class="container"><div class="section-head"><div><span class="eyebrow">POPULAR SERVICES</span><h2>One place for everyday local work</h2></div><p>Start with the most common categories and expand as your worker network grows.</p></div><div class="service-grid" id="serviceGrid"></div></div></section>
+
+    <section class="section alt" id="workers"><div class="container"><div class="section-head"><div><span class="eyebrow">WORKER DIRECTORY</span><h2>Find available workers</h2></div><p id="resultText">Showing sample worker profiles</p></div>
+      <div class="filters"><input id="searchInput" placeholder="Search name, skill or area"><select id="categoryFilter"><option value="all">All categories</option><option>Cook</option><option>Driver</option><option>Daily Labour</option><option>House Help</option><option>Cleaner</option></select><select id="hireFilter"><option value="Any">Any hiring type</option><option>Daily</option><option>Monthly</option></select><button class="btn btn-dark" id="clearFilters">Clear</button></div>
+      <div class="worker-grid" id="workerGrid"></div><div class="empty" id="emptyState" hidden>No matching sample workers found. Try another category or area.</div>
+    </div></section>
+
+    <section class="section" id="how"><div class="container"><div class="center-head"><span class="eyebrow">HOW IT WORKS</span><h2>Hire in four simple steps</h2></div><div class="steps"><article><b>1</b><h3>Choose service</h3><p>Select cook, driver, labour, house help or another category.</p></article><article><b>2</b><h3>Set location</h3><p>Search by city, locality or PIN code and choose daily or monthly work.</p></article><article><b>3</b><h3>Compare profiles</h3><p>Review skills, experience, expected rates, ratings and availability.</p></article><article><b>4</b><h3>Send request</h3><p>Share the requirement with a worker and confirm details directly.</p></article></div></div></section>
+
+    <section class="section job-section" id="post-job"><div class="container job-grid"><div><span class="eyebrow">NEED SOMEONE QUICKLY?</span><h2>Post your requirement</h2><p>Create a requirement and let suitable workers know what you need. This demo stores submitted jobs only in your browser.</p><div class="job-points"><span>✓ One-time, daily or monthly jobs</span><span>✓ Set preferred budget</span><span>✓ Choose category and locality</span></div></div><form class="job-form" id="jobForm"><div class="two"><label>Your name<input required name="name" placeholder="Full name"></label><label>Mobile<input required name="mobile" inputmode="numeric" placeholder="10-digit mobile"></label></div><div class="two"><label>Worker needed<select required name="category"><option>Cook</option><option>Driver</option><option>Daily Labour</option><option>House Help</option><option>Cleaner</option></select></label><label>Work type<select name="type"><option>One-time</option><option>Daily</option><option>Monthly</option></select></label></div><div class="two"><label>Area<input required name="area" placeholder="Locality / PIN"></label><label>Budget<input name="budget" placeholder="e.g. ₹800/day"></label></div><label>Requirement<textarea required name="details" rows="4" placeholder="Describe timing, duties, start date, etc."></textarea></label><button class="btn btn-primary btn-block">Post Requirement</button></form></div></section>
+
+    <section class="section alt"><div class="container"><div class="center-head"><span class="eyebrow">SAFETY FIRST</span><h2>Build trust into the platform</h2></div><div class="safety-grid"><article>🪪<h3>Verification badges</h3><p>Show verification status without exposing document numbers publicly.</p></article><article>⭐<h3>Genuine reviews</h3><p>Allow reviews only after a completed booking or confirmed job.</p></article><article>🔒<h3>Protect personal data</h3><p>Keep identity documents and exact home addresses out of public profiles.</p></article></div></div></section>
+  </main>
+
+  <footer><div class="container footer-grid"><div><a class="brand footer-brand" href="#home"><span class="brand-mark">KS</span><span>KaamSaathi</span></a><p>A prototype marketplace for connecting local workers and customers.</p></div><div><h4>Services</h4><a href="#workers">Cook</a><a href="#workers">Driver</a><a href="#workers">Daily Labour</a><a href="#workers">House Help</a></div><div><h4>Platform</h4><a href="#how">How it works</a><a href="#post-job">Post a job</a><button class="footer-link" data-open="workerModal">Register as worker</button></div><div><h4>Important</h4><p>Worker information shown here is fictional demo data. Verify identity, skills and terms before real-world hiring.</p></div></div><div class="container copyright">© 2026 KaamSaathi Prototype. Built for demonstration.</div></footer>
+
+  <div class="modal" id="profileModal"><div class="modal-card"><button class="modal-close" data-close>×</button><div id="profileContent"></div></div></div>
+  <div class="modal" id="workerModal"><div class="modal-card"><button class="modal-close" data-close>×</button><h2>Register as a Worker</h2><p class="muted">Create a sample profile. Data stays in this browser.</p><form id="workerForm"><div class="two"><label>Name<input required name="name"></label><label>Mobile<input required name="mobile" inputmode="numeric"></label></div><div class="two"><label>Profession<select name="category"><option>Cook</option><option>Driver</option><option>Daily Labour</option><option>House Help</option><option>Cleaner</option></select></label><label>Experience<input required name="experience" placeholder="e.g. 5 years"></label></div><div class="two"><label>Area<input required name="area"></label><label>Expected rate<input required name="rate" placeholder="e.g. ₹700/day"></label></div><label>Skills<input required name="skills" placeholder="e.g. North Indian, Vegetarian"></label><button class="btn btn-primary btn-block">Create Demo Profile</button></form></div></div>
+  <div class="modal" id="loginModal"><div class="modal-card small"><button class="modal-close" data-close>×</button><h2>Login / Sign Up</h2><p class="muted">OTP authentication would be connected to a real backend later.</p><form id="loginForm"><label>Mobile number<input required inputmode="numeric" placeholder="Enter mobile number"></label><button class="btn btn-primary btn-block">Continue</button></form></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body></html>
