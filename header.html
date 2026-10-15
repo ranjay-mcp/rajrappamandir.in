@@ -23,7 +23,7 @@
                 </li>
 
                 <!-- Temple Information -->
-                <li class="nav-dropdown">
+             <!--   <li class="nav-dropdown">
                     <details>
                         <summary>
                             Temple Guide
@@ -36,7 +36,7 @@
                         </ul>
                     </details>
                 </li>
-
+-->
                 <!-- Temples and Tourist Places -->
                 <li class="nav-dropdown">
                     <details>
@@ -128,3 +128,43 @@
 
     </div>
 </header>
+
+<script>
+    
+document.addEventListener("click", function (event) {
+    document.querySelectorAll(".main-nav .nav-dropdown details[open]")
+        .forEach(function (dropdown) {
+            if (!dropdown.contains(event.target)) {
+                dropdown.open = false;
+            }
+        });
+});
+
+// Close dropdowns when pressing Escape
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        document.querySelectorAll(
+            ".main-nav .nav-dropdown details[open]"
+        ).forEach(function (dropdown) {
+            dropdown.open = false;
+        });
+    }
+});
+
+// Close other dropdowns when opening a new one
+document.querySelectorAll(".main-nav .nav-dropdown details")
+    .forEach(function (dropdown) {
+        dropdown.addEventListener("toggle", function () {
+            if (dropdown.open) {
+                document.querySelectorAll(
+                    ".main-nav .nav-dropdown details[open]"
+                ).forEach(function (otherDropdown) {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.open = false;
+                    }
+                });
+            }
+        });
+    });
+
+</script> 
