@@ -10,7 +10,9 @@ section{padding:85px 0}.k{font:700 12px Arial;letter-spacing:2.5px;text-transfor
 .cta{text-align:center;background:#fff5e5;border-top:1px solid var(--l)}footer{background:var(--d);color:#fff;padding:35px 0;font:13px Arial}footer a{color:#f1d99e;text-decoration:underline}
 @media(max-width:800px){nav ul{display:none}.grid2,.contact{grid-template-columns:1fr}.cards,.facts{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.gallery .tile:first-child{grid-row:span 2}}@media(max-width:560px){section{padding:60px 0}.cards,.facts,.gallery{grid-template-columns:1fr}.gallery .tile:first-child{grid-row:span 1}.photo{height:340px}}
 </style></head><body>
-<header><div class="wrap nav"><a class="brand" href="index.html">🛕 Rajrappa Mandir<small>Maa Chhinnamasta Temple | Ramgarh, Jharkhand</small></a><nav><ul><li><a class="" href="index.html">Home</a></li><li><a class="" href="history.html">History</a></li><li><a class="" href="timings.html">Temple Timings</a></li><li><a class="active" href="gallery.html">Gallery</a></li><li><a class="" href="contact.html">Contact</a></li></ul></nav></div></header><main><section class="hero"><div class="wrap"><div class="ey">Rajrappa · Visual Journey</div><h1>Rajrappa Mandir Gallery</h1><p>Explore the temple, sacred surroundings and beautiful landscape of Rajrappa.</p><a class="btn primary" href="#gallery">View Photos ↓</a></div></section>
+<!-- Header Section -->
+ <div id="header"></div>
+<main><section class="hero"><div class="wrap"><div class="ey">Rajrappa · Visual Journey</div><h1>Rajrappa Mandir Gallery</h1><p>Explore the temple, sacred surroundings and beautiful landscape of Rajrappa.</p><a class="btn primary" href="#gallery">View Photos ↓</a></div></section>
 <section id="gallery"><div class="wrap"><div class="k">Temple & Surroundings</div><h2>A glimpse of the sacred landscape</h2><p class="lead">This gallery is ready for your own Rajrappa photographs; the current images provide a visual starting point.</p><div class="gallery">
 <div class="tile"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Chhinnamastika%20Temple%20Rajrappa.jpg" alt="Maa Chhinnamasta Temple"><div class="cap">Maa Chhinnamasta Temple</div></div>
 <div class="tile"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Rajrappa%20Temple%201.jpg" alt="Rajrappa Temple"><div class="cap">Temple Complex</div></div>
@@ -18,4 +20,15 @@ section{padding:85px 0}.k{font:700 12px Arial;letter-spacing:2.5px;text-transfor
 <div class="tile"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Chhinnamastika%20Temple%2C%20Rajrappa.jpg" alt="Rajrappa heritage"><div class="cap">Rajrappa Heritage</div></div>
 <div class="tile"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Rajrappa%20Temple%201.jpg" alt="Rajrappa temple detail"><div class="cap">A Place of Devotion</div></div></div></div></section>
 <section class="dark"><div class="wrap grid2"><div><div class="k">Your Rajrappa Memories</div><h2>Make the gallery truly yours</h2><p class="lead">Replace the sample images with your own temple, festival, river and visitor photographs for a more authentic website.</p></div><div class="photo"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Rajrappa%20Temple%202.jpg" alt="Rajrappa Temple"></div></div></section></main>
-<footer><div class="wrap">🛕 <b>Rajrappa Mandir</b> · Maa Chhinnamasta Temple, Ramgarh, Jharkhand · <a href="mailto:info@rajrappamandir.in">info@rajrappamandir.in</a><br><br>© 2026 Rajrappa Mandir. All Rights Reserved.</div></footer></body></html>
+<!-- Footer Section -->
+<div id="footer"></div>
+</body></html>
+<script>
+async function loadComponent(id, file) {
+    const response = await fetch(file);
+    document.getElementById(id).innerHTML = await response.text();
+}
+
+loadComponent("header", "header.html");
+loadComponent("footer", "footer.html");
+</script>

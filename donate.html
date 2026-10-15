@@ -21,7 +21,8 @@ section{padding:72px 0}h2{font-size:34px;line-height:1.2;margin:8px 0 16px}.lead
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="index.html">🛕 Rajrappa Mandir<small>Maa Chhinnamasta Temple | Ramgarh, Jharkhand</small></a><nav><ul><li><a href="index.html">Home</a></li><li><a href="history.html">History</a></li><li><a href="timings.html">Temple Timings</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li><li><a class="active" href="donate.html">Donate</a></li></ul></nav></div></header>
+<!-- Header Section -->
+ <div id="header"></div>
 <main>
 <section class="hero"><div class="wrap inner"><div class="k">Rajrappa · Ramgarh · Jharkhand</div><h1>Support Maa Chhinnamasta Mandir</h1><p>Your contribution can support seva and the continued care of this sacred temple and pilgrimage destination at Rajrappa.</p><a class="btn primary" href="#donate">Donate / Seva</a><a class="btn outline" href="contact.html">Contact Us</a></div></section>
 <section id="donate"><div class="wrap"><div class="grid2"><div><div class="k">Sacred Seva</div><h2>Make a Contribution</h2><p class="lead">Devotees who wish to support Maa Chhinnamasta Mandir may use the official donation details provided by the temple. Please verify the payment details before making any contribution.</p><div class="facts"><div class="fact"><b>Temple</b>Maa Chhinnamasta Mandir</div><div class="fact"><b>Location</b>Rajrappa, Ramgarh, Jharkhand</div><div class="fact"><b>Payment</b>UPI / Digital Payment</div><div class="fact"><b>Currency</b>Indian Rupees (INR)</div></div><div class="notice"><b>Important:</b> The UPI ID and QR code below are placeholders until the official temple payment details are verified and added. Do not send money to an unverified account.</div></div>
@@ -30,5 +31,15 @@ section{padding:72px 0}h2{font-size:34px;line-height:1.2;margin:8px 0 16px}.lead
 <section><div class="wrap"><div class="panel"><div class="k">Before You Donate</div><h2>Verify the Payment Details</h2><p>Before completing a digital donation, check that the displayed UPI ID, account name and QR code match the official details provided by the temple. If you are unsure, please contact the temple or use the official contact information before making a payment.</p><a class="btn primary" href="contact.html">Contact the Temple</a></div></div></section>
 <section class="cta"><div class="wrap"><h2>Thank You for Your Support</h2><p>May the blessings of Maa Chhinnamasta be with you and your family.</p><a class="btn primary" href="index.html">Back to Home</a></div></section>
 </main>
-<footer><div class="wrap">🛕 <b>Rajrappa Mandir</b> · Maa Chhinnamasta Temple, Ramgarh, Jharkhand · <a href="mailto:info@rajrappamandir.in">info@rajrappamandir.in</a><br><br>© 2026 Rajrappa Mandir. All Rights Reserved.</div></footer>
+<!-- Footer Section -->
+<div id="footer"></div>
 </body></html>
+<script>
+async function loadComponent(id, file) {
+    const response = await fetch(file);
+    document.getElementById(id).innerHTML = await response.text();
+}
+
+loadComponent("header", "header.html");
+loadComponent("footer", "footer.html");
+</script>
