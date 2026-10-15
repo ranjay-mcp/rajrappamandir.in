@@ -2,82 +2,80 @@
 <header class="site-header">
     <div class="wrap nav">
 
-        <!-- Website Brand -->
-        <a class="brand" href="index.html" aria-label="Rajrappa Mandir Home">
-            <span class="brand-title">🛕 Rajrappa Mandir</span>
-            <small>Maa Chhinnamasta Temple | Ramgarh, Jharkhand</small>
+        <!-- Brand -->
+        <a class="brand" href="index.html"
+           aria-label="Rajrappa Mandir Home">
+            <span class="brand-title">
+                <span aria-hidden="true">🛕</span>
+                Rajrappa Mandir
+            </span>
+            <small>Maa Chhinnamasta Temple</small>
+            <small class="brand-location">
+                Ramgarh, Jharkhand
+            </small>
         </a>
 
-        <!-- Main Navigation -->
+        <!-- Navigation -->
         <nav class="main-nav" aria-label="Main navigation">
             <ul>
                 <li>
                     <a href="index.html">Home</a>
                 </li>
 
-                <li>
-                    <a href="about.html">About</a>
+                <!-- Temple Information -->
+                <li class="nav-dropdown">
+                    <details>
+                        <summary>
+                            Temple Guide
+                            <span class="dropdown-arrow">▾</span>
+                        </summary>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About the Temple</a></li>
+                            <li><a href="history.html">Temple History</a></li>
+                            <li><a href="timings.html">Darshan Timings</a></li>
+                        </ul>
+                    </details>
                 </li>
 
-                <li>
-                    <a href="history.html">History</a>
-                </li>
-
-                <li>
-                    <a href="timings.html">Temple Timings</a>
-                </li>
-
-                <li>
-                    <a href="gallery.html">Gallery</a>
-                </li>
-
-                <!-- Temples & Places Dropdown -->
+                <!-- Temples and Tourist Places -->
                 <li class="nav-dropdown">
                     <details>
                         <summary>
                             Temples &amp; Places
-                            <span class="dropdown-arrow" aria-hidden="true">▾</span>
+                            <span class="dropdown-arrow">▾</span>
                         </summary>
-
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="temples/index.html">
                                     All Temples &amp; Places
                                 </a>
                             </li>
-
                             <li class="dropdown-divider"></li>
-
                             <li>
                                 <a href="index.html">
                                     Maa Chhinnamastika Mandir
                                 </a>
                             </li>
-
                             <li>
                                 <a href="temples/bhadrakali-mandir.html">
                                     Maa Bhadrakali Mandir
                                 </a>
                             </li>
-
                             <li>
                                 <a href="temples/debari-temple.html">
                                     Debari Temple
                                 </a>
                             </li>
-
                             <li>
                                 <a href="temples/kauleshwari-hill-temple.html">
                                     Kauleshwari Hill Temple
                                 </a>
                             </li>
-
                             <li>
                                 <a href="places/rajrappa-waterfall.html">
                                     Rajrappa Waterfall
                                 </a>
                             </li>
-
                             <li>
                                 <a href="temples/shantinath-jain-mandir.html">
                                     Shantinath Jain Mandir
@@ -87,12 +85,43 @@
                     </details>
                 </li>
 
+                <!-- Travel Services -->
+                <li class="nav-dropdown">
+                    <details>
+                        <summary>
+                            Travel &amp; Stay
+                            <span class="dropdown-arrow">▾</span>
+                        </summary>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="cab-booking.html">
+                                    Cab Booking
+                                </a>
+                            </li>
+                            <li>
+                                <a href="hotel-booking.html">
+                                    Hotel Booking
+                                </a>
+                            </li>
+                            <li>
+                                <a href="travel-guide.html">
+                                    Travel Guide
+                                </a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+
                 <li>
-                    <a href="donate.html">Donate</a>
+                    <a href="gallery.html">Gallery</a>
                 </li>
 
                 <li>
                     <a href="contact.html">Contact</a>
+                </li>
+
+                <li class="nav-donate">
+                    <a href="donate.html">Donate</a>
                 </li>
             </ul>
         </nav>
