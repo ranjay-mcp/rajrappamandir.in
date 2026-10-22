@@ -463,7 +463,437 @@ section{padding:85px 0}.k{font:700 12px Arial;letter-spacing:2.5px;text-transfor
         padding: 18px 10px;
     }
 }
-
-
-
 @media(max-width:800px){nav ul{display:none}.grid2,.contact{grid-template-columns:1fr}.cards,.facts{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.gallery .tile:first-child{grid-row:span 2}}@media(max-width:560px){section{padding:60px 0}.cards,.facts,.gallery{grid-template-columns:1fr}.gallery .tile:first-child{grid-row:span 1}.photo{height:340px}}
+
+
+/* History page wrapper */
+.history-page {
+    --history-maroon: var(--m, #7a1f1f);
+    --history-dark: var(--d, #3b1010);
+    --history-gold: var(--g, #d6a23a);
+    --history-cream: var(--c, #fff9ef);
+    --history-text: var(--t, #332a25);
+    --history-muted: var(--u, #75675e);
+    --history-border: var(--l, #eadbc9);
+
+    color: var(--history-text);
+    background: var(--history-cream);
+    overflow-wrap: break-word;
+}
+
+.history-page img {
+    max-width: 100%;
+}
+
+.history-page h1,
+.history-page h2,
+.history-page h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.25;
+}
+
+.history-page p {
+    line-height: 1.8;
+}
+
+/* Hero banner */
+.history-page .hero {
+    position: relative;
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    color: #fff9ef;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(38, 8, 8, .91),
+            rgba(38, 8, 8, .65) 58%,
+            rgba(38, 8, 8, .25)
+        ),
+        url("assets/images/rajrappa-history-hero.jpg")
+        center 45% / cover no-repeat;
+}
+
+.history-page .hero-content {
+    width: min(1160px, 92%);
+    margin: 0 auto;
+    padding: 75px 0;
+}
+
+.history-page .eyebrow {
+    display: inline-block;
+    color: #f1d99e;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.history-page .hero h1 {
+    max-width: 760px;
+    margin: 18px 0;
+    color: #fff9ef;
+    font-size: clamp(2.4rem, 5.5vw, 4rem);
+    line-height: 1.12;
+}
+
+.history-page .hero p {
+    max-width: 680px;
+    color: #f8ede2;
+    font-size: 17px;
+}
+
+.history-page .button {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 22px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background: var(--history-gold);
+    color: var(--history-dark);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.history-page .button:hover,
+.history-page .button:focus-visible {
+    background: #edc16b;
+    color: var(--history-dark);
+    transform: translateY(-2px);
+}
+
+/* General history-page sections */
+.history-page .section {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 72px 24px;
+}
+
+.history-page .section-heading {
+    max-width: 760px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.history-page .section-heading .eyebrow,
+.history-page .intro-copy .eyebrow,
+.history-page .heritage-note .eyebrow {
+    color: var(--history-maroon);
+}
+
+.history-page .section-heading h2 {
+    margin: 12px 0 16px;
+    color: var(--history-dark);
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.history-page .section-heading p {
+    color: var(--history-muted);
+}
+
+/* Intro section */
+.history-page .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 42px;
+    align-items: center;
+}
+
+.history-page .intro-image {
+    display: block;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(59, 16, 16, .12);
+}
+
+.history-page .intro-copy h2 {
+    margin: 12px 0 18px;
+    color: var(--history-maroon);
+    font-size: clamp(1.8rem, 3.5vw, 2.3rem);
+}
+
+.history-page .intro-copy p {
+    margin-bottom: 15px;
+    color: var(--history-muted);
+}
+
+.history-page .note {
+    margin-top: 20px;
+    padding: 17px 20px;
+    border-left: 4px solid var(--history-gold);
+    border-radius: 0 8px 8px 0;
+    background: #f5ead9;
+    color: var(--history-text);
+}
+
+/* History timeline */
+.history-page .timeline-section {
+    background: #f3e8d8;
+}
+
+.history-page .timeline {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.history-page .timeline::before {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 12px;
+    width: 2px;
+    background: #d8b987;
+    content: "";
+}
+
+.history-page .timeline-item {
+    position: relative;
+    padding: 0 0 34px 44px;
+}
+
+.history-page .timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.history-page .timeline-item::before {
+    position: absolute;
+    top: 7px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    border: 3px solid #f3e8d8;
+    border-radius: 50%;
+    background: var(--history-maroon);
+    box-shadow: 0 0 0 1px var(--history-gold);
+    content: "";
+}
+
+.history-page .timeline-item h3 {
+    margin: 0 0 8px;
+    color: var(--history-maroon);
+    font-size: 22px;
+}
+
+.history-page .timeline-item p {
+    margin: 0;
+    color: var(--history-muted);
+}
+
+/* Spiritual significance cards */
+.history-page .belief-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.history-page .belief-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--history-border);
+    border-radius: 12px;
+    background: #fff;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.history-page .belief-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(59, 16, 16, .10);
+}
+
+.history-page .belief-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.history-page .belief-card-content {
+    padding: 22px;
+}
+
+.history-page .belief-card h3 {
+    margin: 0 0 10px;
+    color: var(--history-maroon);
+    font-size: 22px;
+}
+
+.history-page .belief-card p {
+    margin: 0;
+    color: var(--history-muted);
+    font-size: 14px;
+}
+
+/* River confluence banner */
+.history-page .river-banner {
+    display: flex;
+    min-height: 330px;
+    align-items: center;
+    color: #fff;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(38, 24, 20, .88),
+            rgba(38, 24, 20, .40)
+        ),
+        url("assets/images/rajrappa-river.jpg")
+        center / cover no-repeat;
+}
+
+.history-page .river-content {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 55px 0;
+}
+
+.history-page .river-content .eyebrow {
+    color: #f1d99e;
+}
+
+.history-page .river-content h2 {
+    max-width: 650px;
+    margin: 12px 0;
+    color: #fff;
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+}
+
+.history-page .river-content p {
+    max-width: 660px;
+    color: #fff1e4;
+}
+
+/* Heritage closing section */
+.history-page .heritage-note {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.history-page .heritage-note h2 {
+    margin: 12px 0 18px;
+    color: var(--history-maroon);
+    font-size: clamp(1.8rem, 4vw, 2.3rem);
+}
+
+.history-page .heritage-note p {
+    margin-bottom: 14px;
+    color: var(--history-muted);
+}
+
+/* Keyboard accessibility */
+.history-page a:focus-visible {
+    outline: 3px solid var(--history-gold);
+    outline-offset: 4px;
+}
+
+/* Tablet layout */
+@media (max-width: 900px) {
+    .history-page .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .history-page .intro-image {
+        height: 350px;
+    }
+
+    .history-page .belief-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .history-page .section {
+        padding: 58px 24px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .history-page .hero {
+        min-height: 410px;
+        background-position: 58% center;
+    }
+
+    .history-page .hero-content {
+        padding: 55px 0;
+    }
+
+    .history-page .hero h1 {
+        font-size: clamp(2.1rem, 9vw, 3rem);
+    }
+
+    .history-page .hero p {
+        font-size: 15px;
+    }
+
+    .history-page .section {
+        padding: 46px 18px;
+    }
+
+    .history-page .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .history-page .intro-image {
+        height: 270px;
+    }
+
+    .history-page .belief-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .history-page .belief-card img {
+        height: 230px;
+    }
+
+    .history-page .belief-card-content {
+        padding: 19px;
+    }
+
+    .history-page .timeline-item {
+        padding-left: 36px;
+        padding-bottom: 28px;
+    }
+
+    .history-page .timeline::before {
+        left: 10px;
+    }
+
+    .history-page .timeline-item::before {
+        left: 2px;
+    }
+
+    .history-page .river-banner {
+        min-height: 300px;
+        background-position: center;
+    }
+
+    .history-page .river-content {
+        padding: 42px 0;
+    }
+
+    .history-page .note {
+        padding: 14px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .history-page *,
+    .history-page *::before,
+    .history-page *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
